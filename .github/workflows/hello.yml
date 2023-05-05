@@ -1,0 +1,20 @@
+name : Hello World
+
+on:
+  workflow_dispatch:
+   inputs:
+      sayHello:
+         description: 'Hi, GitHub Action 계속 진행할까요? (Yes/No) ?'
+         required: true
+         default: 'Yes'
+         
+jobs:
+  Say-Hello:
+     runs-on: ubuntu-latest
+     name: GitHub Hello
+     if : ${{ github.event.inputs.sayHello == 'Yes'}}
+     
+     steps:
+       - name: GitHub Action Hello
+         run: echo "안녕, GitHub Action"
+          
