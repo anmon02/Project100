@@ -17,7 +17,8 @@ jobs:
      steps:
        - name: GitHub Action Hello
          run: |
-              echo "안녕, GitHub Action" \
-              echo "${{ github.event.inputs.sayHello}}" \
+              echo "안녕, GitHub Action"
+              echo "${{ github.event.inputs.sayHello}}"
               uname -a
+         shell: bash
           
