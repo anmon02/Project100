@@ -16,5 +16,7 @@ jobs:
      
      steps:
        - name: GitHub Action Hello
-         run: echo "안녕, GitHub Action"
+         run: |
+              echo "안녕, GitHub Action" \
+              ls
           
